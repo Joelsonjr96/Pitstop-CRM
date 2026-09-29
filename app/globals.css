@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  /* Paleta Base */
+  --background: #0B0D10;
+  --surface: #111419;
+  --surface-elevated: #171B21;
+  --foreground: #F5F7FA;
+  --muted-foreground: #9299A5;
+  --border: #262C34;
+  --muted: #262C34; /* Usando a cor de border para muted também */
+
+  /* Primária (Configurável via style inline) */
+  --primary: #E11D48; /* Default */
+  --primary-foreground: #FFFFFF;
+
+  /* Status (Manter como variáveis para permitir ajustes se necessário) */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #e11d48;
+  --info: #3b82f6;
+
+  --card: var(--surface);
+  --card-foreground: var(--foreground);
+}
+
+@theme {
+  --font-sans: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  /* Mapeamento de cores */
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-foreground: var(--foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
